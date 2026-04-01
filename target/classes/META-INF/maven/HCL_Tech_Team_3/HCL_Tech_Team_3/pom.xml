@@ -75,6 +75,14 @@
 	    <version>5.2.5</version>
 </dependency>
 
+
+<!-- In pom.xml, add alongside existing selenium dependency -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.8.0</version> <!-- already present — ensure it's up to date -->
+</dependency>
+
     </dependencies>
   
 </project>

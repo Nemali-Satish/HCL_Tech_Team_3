@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UdemyAutomationSuite" verbose="1" parallel="false">
+
+
+  <listeners>
+    <listener class-name="utilities.ExtentReportManager"/>
+  </listeners>
+
+  <test name="UdemyTests_Chrome_Windows">
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"/>
+
+    <groups>
+      <run>
+        <include name="Master"/>
+      </run>
+    </groups>
+
+    <classes>
+      <!-- TC_001: Open site, handle popups, search -->
+      <class name="testCases.TC_001_HomePageTest"/>
+      <!-- TC_002: Verify results, apply filter -->
+      <class name="testCases.TC_002_SearchResultsTest"/>
+       <!-- TC_003: Open course, verify details -->
+      <class name="testCases.TC_003_CourseDetailTest"/>
+    </classes>
+  </test>
+
+</suite>
